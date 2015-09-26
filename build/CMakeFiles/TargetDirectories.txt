@@ -1,0 +1,2 @@
+/Users/pathpot/Documents/NahmDaeng/Git/ndlib/build/modules/utils/CMakeFiles/ndutils.dir
+/Users/pathpot/Documents/NahmDaeng/Git/ndlib/build/examples/playground/CMakeFiles/playground.dir

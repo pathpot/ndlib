@@ -1,0 +1,2 @@
+/usr/bin/ar cr libndutils.a  CMakeFiles/ndutils.dir/vecmat.cpp.o
+/usr/bin/ranlib libndutils.a
