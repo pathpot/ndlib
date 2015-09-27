@@ -1,2 +1,20 @@
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC3E+A7F+Gtt1P2SbA6FFYiiNAisNc395vw9F0e4pfVjpUCpw2YFqdWFmTeTFscFJct2G6vCxTlwlncZ4QrN00upsfG8hhi7Y2M2J+E4fZ4u4OFfdGKJwKGPT0KJMic5dbJe0OXi47LqCKU61urKhngM0PJDqXMIvzWu58XiZsOK1J0xWM/AvP5I87f/klh8LnT9U4kpJht155aB+/Pq6+3BSyE9oXSS5kl+PqQ+Wqg2YCgRB7BNEMfm+hGJ9fqO54RJodb0xke8Y6dyTD8gfPHD1Yizv9vNtRJVEzg4+MS0QnUdDUZua1LqLcIkZx++ZnjBzIEwI2a0hP2vxA1acD7OLZ7EyBh1H11HsxvpjFYVJrg1nIKxUqEHqm1lfYZfZ5Q2yAlQpv0E/1YeOYZWW68lRyA/GJRJf4+CADXtJmW6x1d46XVN+NjTVaXtQTx9nBD319+P5IRDX2w0Yp/3xpgYwLJhj4voZ2ZRGKc1z2CfbdZzWeosLRbzBz5honMyNKiBZEhjiThBBIJJ7tc3qQfN2GdPJ/wx6tNUYpOdbPbbWaNQpmmXmkEe/XPLIEPnQTAjC6GRgLduc4WW9oCLm6uAIKQztXXiSYTVb3SQUd2jT2PnwF0RpAVNhShueZeTJf+CQwPqfhc7EgXIhApxDEyv5gwO7MW5egJRTEZ4wguzQ== p.saranrittichai@gmail.com
+#ifndef _ND_CAMERAINTERFACE_H_
+#define _ND_CAMERAINTERFACE_H_
 
+#include <common/Image.h>
+
+namespace nd{
+
+	template <int NumChannels>
+	class CameraInterface {
+	public:
+		CameraInterface();
+		virtual ~CameraInterface();
+
+		virtual void capture(Image<NumChannels> &image) = 0;
+		virtual void close() = 0;
+	};
+
+}
+
+#endif

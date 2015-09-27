@@ -7,10 +7,9 @@ set (Tutorial_VERSION_MINOR 0)
 
 # add include directory
 include_directories(${PROJECT_SOURCE_DIR}/include)
-include_directories(${PROJECT_SOURCE_DIR}/include)
 
 # find dependency package
-find_package(OpenCV REQUIRED)
+# find_package(OpenCV REQUIRED)
 
 # add subfolders
 add_subdirectory(modules)

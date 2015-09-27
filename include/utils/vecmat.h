@@ -1,5 +1,5 @@
-#ifndef _ND_DATATYPE_H_
-#define _ND_DATATYPE_H_
+#ifndef _ND_VECMAT_H_
+#define _ND_VECMAT_H_
 
 #include <math.h>
 #include <stdio.h>
