@@ -4,14 +4,14 @@
 #include <common/image.h>
 
 namespace nd{
-	template <nd::ImageType T>
+	template <ImageType T>
 	class CameraInterface {
 	public:
 		CameraInterface();
-		virtual ~CameraInterface();
+		~CameraInterface();
 
-		virtual void capture(Image<T> &image) = 0;
-		virtual void close() = 0;
+		//virtual bool read(Image<T> &image) = 0;
+		//virtual void close() = 0;
 	};
 }
 

@@ -2,8 +2,13 @@
 #define _ND_IMAGE_H_
 
 namespace nd{
+	enum ImageType{
+		GrayScale,
+		Rgb,
+		Depth
+	};
 
-	template <int NumChannels>
+	template <ImageType T>
 	class Image {
 	public:
 		Image();
