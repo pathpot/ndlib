@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <sensor/webcam.h>
-
+#include <display/image_display.h>
 int main(){
 	nd::Image<nd::Rgb> image;
 
@@ -14,8 +14,17 @@ int main(){
 		printf("Open camera successfully!\n");
 	}
 
-	// read image
-	webcam.read(image);
+	std::string name = "Display";
+	while(true){
+		// read image
+		webcam.read(image);
+
+		// show image
+		nd::ImageDisplay::display(name, image);
+
+		// TODO: remove opencv dependency
+		cv::waitKey(100);
+	}
 
 	return 0;
 }
