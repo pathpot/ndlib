@@ -17,8 +17,22 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 file(GLOB NDLIB_SOURCE_FILES 	"${PROJECT_SOURCE_DIR}/src/*.cpp" 
 								"${PROJECT_SOURCE_DIR}/src/*/*.cpp")
 
+# add g2o
+include_directories(${PROJECT_SOURCE_DIR}/ext/g2o/include)
+link_directories(${PROJECT_SOURCE_DIR}/ext/g2o/lib)
+set(G2O_LIBS g2o_cli g2o_core g2o_csparse_extension 
+	g2o_ext_csparse g2o_ext_freeglut_minimal g2o_hierarchical g2o_interface 
+	g2o_opengl_helper g2o_parser g2o_simulator g2o_solver_csparse 
+	g2o_solver_dense g2o_solver_eigen g2o_solver_pcg g2o_solver_slam2d_linear 
+	g2o_solver_structure_only g2o_stuff g2o_tutorial_slam2d g2o_types_data 
+	g2o_types_icp g2o_types_sba g2o_types_sclam2d g2o_types_sim3 
+	g2o_types_slam2d g2o_types_slam2d_addons g2o_types_slam3d g2o_types_slam3d_addons
+	amd.2.3.1 blas-dev blas3 btf1.2.0 camd2.3.1 ccolamd2.8.0 cholmod2.1.2 csparse3.1.2 
+	cxsparse3.1.2 gfortran3 klu1.2.1 lapack-dev lapack3 ldl2.1.0 spqr1.3.1 suitesparse-dev 
+	umfpack5.6.2) 
+
 # set libraries
-set(NDLIB_LIBS ${OpenCV_LIBS})
+set(NDLIB_LIBS ${OpenCV_LIBS} ${G2O_LIBS})
 
 # add subfolders
 add_subdirectory(examples)
