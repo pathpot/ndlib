@@ -1,5 +1,7 @@
-project (examples)
+project (it)
 
 # add subfolders
-add_subdirectory(playground)
-add_subdirectory(webcam_sample)
+#add_subdirectory(playground)
+#add_subdirectory(webcam_reader)
+#add_subdirectory(feature_tracker)
+add_subdirectory(hello_world)

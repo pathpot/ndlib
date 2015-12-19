@@ -1,6 +1,6 @@
-project (webcam_sample)
+project (webcam_reader)
 
-set(${PROJECT_NAME}_SOURCE webcam_sample.cpp)
+set(${PROJECT_NAME}_SOURCE main.cpp image_reader_application.cpp)
 
 # add subfolders
 add_executable(${PROJECT_NAME} ${${PROJECT_NAME}_SOURCE})

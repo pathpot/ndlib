@@ -5,7 +5,7 @@
 #include <opencv2/opencv.hpp>
 
 namespace nd{
-	class Webcam : CameraInterface<nd::Rgb> {
+	class Webcam : public CameraInterface<nd::Rgb> {
 	public:
 		Webcam();
 		virtual ~Webcam();

@@ -8,10 +8,10 @@ namespace nd{
 	class CameraInterface {
 	public:
 		CameraInterface();
-		~CameraInterface();
+		virtual ~CameraInterface();
 
-		//virtual bool read(Image<T> &image) = 0;
-		//virtual void close() = 0;
+		virtual bool read(Image<T> &image) = 0;
+		virtual void close() = 0;
 	};
 }
 
