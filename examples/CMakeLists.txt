@@ -7,3 +7,4 @@ project (examples)
 
 add_subdirectory(hello_world)
 add_subdirectory(tutorial_slam2d)
+add_subdirectory(feature_tracker)
